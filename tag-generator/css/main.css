@@ -1,0 +1,35 @@
+.top-banner {
+	padding: 30px;
+	background-color: #f8d8c8;
+	color: #444;
+	margin-bottom: 60px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+	
+}
+
+.top-banner h1 {
+	margin-top: 0;
+	font-size: 48px;
+	color: #800;
+}
+
+.top-banner p {
+	font-size: 18px;
+}
+
+.top-banner a, .top-banner a:visited {
+	color: #800;
+}
+
+.perptag-container {
+	background-color: #222
+}
+
+#perptag-container-row {
+	margin-top: 40px;
+	visibility: hidden;
+}
+
+#perptag-text {
+	color: #ddd;
+}

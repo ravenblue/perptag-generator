@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    
+    <div class="container">
+
+		<div class="row">
+		
+		<div class="col-md-12">
+    
+			<div class="page-header">
+				<h1>PerpTag (beta)</h1>
+				<h4>An online app to assist survivors of sexual assault, molestation, abuse, and inappropriate behavior</h4>
+				<p>
+				The form below will generate a unique hashtag. This hashtag can then be used in any way the survivor chooses, in public or private communication. The generated hashtag cannot be decoded to reveal identity of the survivor or perp. The same hashtag may appear multiple times online if the same perp has multiple survivors.
+				</p>
+				<p>
+				The information entered is not stored or published online. It is only used to generate the unique hashtag.
+				</p>
+			</div>
+			
+		</div>
+
+    	</div>
+    	
+    	<form id="perptag-form" data-toggle="validator">
+    	
+    	<div class="row justify-content-center">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="firstName">First Name</label>
+					<input pattern="^[_A-z]{1,}$" maxlength="35" type="text" class="form-control" id="firstName" placeholder="First Name" data-error="Can only contain letters" data-disable="true">
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+				
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="lastName">Last Name</label>
+					<input pattern="^[_A-z]{1,}$" maxlength="35" required type="text" class="form-control" id="lastName" placeholder="Last Name" data-error="Can only contain letters">
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="phoneNumber">Phone Number (With area code, no dashes or spaces)</label>
+					<input pattern="^[_0-9]{1,}$" maxlength="10" data-minlength="10" required type="text" class="form-control" id="phoneNumber" placeholder="Phone Number" data-error="Must be 10 digits, numbers only">
+					<div class="help-block with-errors"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="row justify-content-center">
+			<div class="col-md-12">
+
+				<div class="checkbox">
+				<h4>Please confirm you undertand the risks of using this tag:</h4>
+				  <label><input type="checkbox" value="" required>I understand that if I use this tag in a public forum, others, including the media, people in my community, or the perpetrator may also generate this same tag, run a search, and find my post using this tag</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" required>I understand that if I use this tag in a private message, group chat, public post, or other medium, some people who view the message may make screenshots of my post or share the post with others, and that this may compromise any future legal action that I take.</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" required>I will not include details of an incident in any private message, group chat, public post, or other medium, in the same message where I use this tag.</label>
+				</div>
+				<div class="checkbox disabled">
+				  <label><input type="checkbox" value="" required>I will not include any information that may identify any other survivors or people involved in any incidents, in the same message where I use this tag.</label>
+				</div>
+
+			</div>
+		</div>
+		
+
+			
+		<div class="row justify-content-center">
+			<div class="col-md-12">
+				<button id="tagButton" type="submit" required class="btn btn-lg btn-danger">Generate tag for this person</button>
+			</div>
+		</div>
+
+
+		</form>
+		
+		<div class="row justify-content-center" id="perptag-container-row">
+			<div class="col-md-12">
+			
+				<a name="perptag-anchor"></a>
+				<h4>Copy and paste this tag in posts, messages, etc., to help make contact with other survivors of the same perpetrator</h4>
+				<div class="jumbotron perptag-container">
+					<h1 id="perptag-text">#perp</h1>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<h4>Do:</h4>
+				<ul>
+				<li>Paste this tag in texts, private messages, social media, blogs</li>
+				<li>Make your post brief, inviting others to reach out</li>
+				<li>Take care how and where you use this tag. If posting in social media or other public forums, others who know the perps name and phone number may generate this same tag and find your post by matching it. This could be people in your community, the media, or the perpetrator themselves.</li>
+				<li>Use private groups or post privacy settings to limit the visibility of a post you make</li>
+				</ul>
+			</div>
+			
+			<div class="col-md-4">
+				<h4>Dont:</h4>
+				<ul>
+				<li>Publicly post details of the incident, or any information that may identify the perp</li>
+				<li>Identify any other survivors or people involved in any incidents</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<script src="js/Shorthash/shorthash.js"></script>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/validator.js"></script>
+	<script src="js/clipboard.js/clipboard.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<script>
+		
+		$( "#perptag-form" ).submit(function( event ) {
+
+			var firstName = document.getElementById("firstName").value.toLowerCase();
+			var lastName = document.getElementById("lastName").value.toLowerCase();
+			var phoneNumber = document.getElementById("phoneNumber").value;
+			var areaCode = phoneNumber.substring(0, 3);
+			
+			//var hashString = "#Perp" + CryptoJS.MD5(firstName + lastName + phoneNumber);
+			var hashString = "#Perp" + unique(firstName + lastName + phoneNumber);
+		
+			document.getElementById("perptag-text").innerHTML = hashString;
+			document.getElementById("perptag-container-row").style.visibility = "visible";
+			
+			event.preventDefault();
+			
+			//var el = document.getElementById("perptag-text");
+			document.getElementById("perptag-text").select();
+			selectElementContents(el);
+			
+			
+			window.location.href = "#perptag-anchor"
+			
+		});
+		
+		function selectElementContents(el) {
+			var range = document.createRange();
+			range.selectNodeContents(el);
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
+			document.execCommand("copy");
+		}
+
+
+	
+	</script>
+	
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110805105-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-110805105-1');
+	</script>
+
+
+    </body>
+</html>
