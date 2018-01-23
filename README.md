@@ -2,7 +2,7 @@
 PerpTag is a tool to enable survivors of sexual assault to find each other through social media without using your perpetrator's name or identifying info.
 
 ## Usage
-Place the /perptag-generator folder on your website and direct users to it.
+Place the /tag-generator folder on your website, rename the folder as you see fit, and direct users of your site to this page. The tag generator is a static html page without any connection to a backend or external service. The tag is generated from a hashing function based on the user-provided name and phone number. The original data cannot be decoded from this tag.
 
 
 ## How it works
