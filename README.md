@@ -18,7 +18,7 @@ There are a number of legal and ethical considerations around the usage and impl
 - If the tag is used in a public forum, others, including the media, people in my community, or the perpetrator may also generate this same tag, run a search, and find the post using this tag
 - Usage of this tag in any medium, whether in private messages, private group chats, blogs, or social media, may compromise any future legal action that the survivor chooses to take.
 - If details of a specific indident are mentioned along with the tag, this may expose the user to legal liability
-- The potential for abuse exists if the tag is used in media that enables posting under an alias or anonymously
+- The risk of fraudulent use is increased if the tag is used in media that enables posting under an alias or anonymously
 
 
 # Frequently asked Questions
